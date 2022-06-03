@@ -21,9 +21,11 @@ const ChatContent = ({ background, chatContent }) => {
             {
                 chatContent.map(
                     (message, index) => (
-                        <div key={index} className={`chat-content-message${message.me ? " chat-content-message-self" : ""}`}>
-                            {!message.me && <a className="chat-content-message-username" style={{ color: message.chatColor }} href=''>{message.username}</a>}
-                            <p className="chat-content-message-message">{message.message}</p>
+                        <div key={index} className={`chat-content-message-container${message.me ? " chat-content-message-container-self" : ""}`}>
+                            <div className="chat-content-message">
+                                {!message.me && <a className="chat-content-message-username" style={{ color: message.chatColor }} href=''>{message.username}</a>}
+                                <p className="chat-content-message-message">{message.message}</p>
+                            </div>
                         </div>
                     )
                 )
