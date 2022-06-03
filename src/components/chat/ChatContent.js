@@ -4,7 +4,7 @@ import './styles/ChatContent.css';
 // import hooks
 import { useEffect } from 'react';
 
-const ChatContent = ({ chatContent }) => {
+const ChatContent = ({ background, chatContent }) => {
 
     // scrool to last message
     const scrollToEnd = () => {
@@ -17,7 +17,7 @@ const ChatContent = ({ chatContent }) => {
     }, [chatContent]);
 
     return (
-        <div className="chat-content" id="chat-content">
+        <div className="chat-content" id="chat-content" style={background !== null && { background }}>
             {
                 chatContent.map(
                     (message, index) => (

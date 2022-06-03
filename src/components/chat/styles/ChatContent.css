@@ -1,22 +1,18 @@
 .chat-content {
-    height: 78vh;
     padding: 20px;
-    border: 1px solid rgba(44, 57, 242, 1);
+    border: 1Zpx solid rgba(44, 57, 242, 1);
     overflow: auto;
-
-
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-content-message {
-
     display: flex;
     flex-direction: row;
     align-items: center;
-
     padding: 15px;
     max-width: 70%;
-
-
     border-radius: 15px;
     background-color: rgb(71, 62, 246);
     color: white;
