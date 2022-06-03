@@ -1,0 +1,33 @@
+.chat-input {
+    width: 100%;
+}
+
+.chat-input {
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-input input {
+    padding: 20px;
+    width: 5%;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    background: rgba(44, 57, 242, 1);
+    color: white;
+}
+
+.chat-input .input-message {
+    width: 85%;
+    background: rgba(62, 73, 237, 1);
+    color: white;
+}
+
+.chat-input .input-message {
+    width: 85%;
+    background: rgba(2, 13, 176, .9);
+}
+
+.chat-input .input-message::placeholder {
+    color: white;
+}

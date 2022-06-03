@@ -1,0 +1,49 @@
+.chat-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    background: rgba(44, 57, 242, 1);
+}
+
+.chat-banner-avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.85);
+}
+
+.chat-banner-user {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.chat-banner-username {
+    margin-left: 15px;
+}
+
+.chat-banner-close-button {
+    background: rgba(44, 57, 242, 1);
+    color: #FFF;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.chat-banner-close-button:hover {
+    background: rgb(255, 64, 30);
+}
