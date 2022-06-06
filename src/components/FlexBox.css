@@ -1,0 +1,19 @@
+.flexbox {
+
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.flexbox-one {
+    background: red;
+    width: 25%;
+
+}
+
+.flexbox-two {
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+}

@@ -38,3 +38,15 @@
 .chat-content-message-message {
     margin: 5px;
 }
+
+.chat-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-content::-webkit-scrollbar-track {
+    background: rgba(0, 95, 173, 0.5)
+}
+
+.chat-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 58, 106, 0.8)
+}

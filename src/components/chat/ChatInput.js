@@ -4,28 +4,39 @@ import './styles/ChatInput.css';
 // import hooks
 import { useState } from 'react';
 
-const ChatInput = ({ setChatData }) => {
+const ChatInput = ({ setChatData, url }) => {
 
     const [message, setMessage] = useState("");
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         // check if message is empty
         if (!(message.replace(/\s/g, '') === '')) {
 
-            setChatData((chatData) => [...chatData, {
 
+            const jsonMessage = {
                 username: "Sheldon",
                 message: message,
                 me: true,
                 chatColor: '#55e9fa'
+            };
 
-            }]);
 
-            console.log(message.split(" ").length);
 
+            setChatData((chatData) => [...chatData, jsonMessage]);
             setMessage("");
+
+            const res = await fetch(`${url}/send`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: jsonMessage.username,
+                    message: jsonMessage.message
+                })
+            })
         }
     }
 
